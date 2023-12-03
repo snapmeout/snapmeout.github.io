@@ -3,11 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Just Note</title>
+    <title>Snap Me Out!</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-  </body>
+    
+<script>
+  function saveToLocalStorage() {
+    // Get the value from the input field
+    const inputText = document.getElementById('focus').value;
+
+    // Save the value to localStorage
+    localStorage.setItem('focus', inputText);
+
+    // Redirect to another HTML page
+    window.location.href = '/distractions.html';
+  }
+</script>
+</body>
 </html>
